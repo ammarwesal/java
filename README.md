@@ -767,7 +767,112 @@ System.out.println(marks[4]);
 }}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
- QUESTIONS:35  
+ QUESTIONS:35  basics of array
+
+package mohammadammar;
+
+public class arrays_12 {
+	public static void main(String[] args) {
+		
+int[] marks = {12,23,3,556,56};
+System.out.println(marks.length);
+System.out.println(marks[4]);
+
+float []weight= {34,78,98.9f,9.377f};
+System.out.println(weight[3]);
+
+String[]name= {"asdgh","etvlo","ammar"};
+System.out.println(name[2]);
+
+}}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTIONS:36 arrays useing loop
+
+package mohammadammar;
+
+public class arrays_12 {
+	public static void main(String[] args) {
+// suppose we have to print 11 marks of student..
+		int[] marks= {12,45,67,90,45,89,67,78,98,23,42};
+		System.out.println(marks[0]);
+		System.out.println(marks[1]);
+		System.out.println(marks[2]);
+		System.out.println(marks[3]);
+		System.out.println(marks[5]);
+		System.out.println(marks[6]);
+		System.out.println(marks[7]);
+		System.out.println(marks[8]);
+		System.out.println(marks[9]);
+		System.out.println(marks[10]);
+		System.out.println("\n\n");
+//  it is to lengthy and take lots of time so we use loops
+		
+		int []markss= {12,45,67,90,45,89,67,78,98,23,42};
+		for(int i=0;i<markss.length;i++) {
+			System.out.println(markss[i]);
+		}
+
+// printing in reverse order
+
+                 System.out.println("\n\n");
+		
+		for(int i=markss.length-1;i>=0;i--) {
+			System.out.println(markss[i]);
+		}
+}}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 37: for eacl loop for array..
+
+
+package mohammadammar;
+
+public class arrays_12 {
+	public static void main(String[] args) {
+		int []markss= {12,45,67,90,45,89,67,78,98,23,42};
+		
+		for(int element:markss) {
+			System.out.println(element);
+		}
+}}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 38:multi dimensional arrays (2-d array)...
+
+package mohammadammar;
+
+public class arrays_12 {
+	public static void main(String[] args) {
+// multi dimensional arrays (2-d array)
+		
+		int[][]flats=new int[2][3];
+		flats[0][0]=101;
+		flats[0][1]=102;
+		flats[0][2]=103;
+		flats[1][0]=201;
+		flats[1][1]=202;
+		flats[1][2]=203;
+		
+		System.out.println(flats[1][2]);
+
+// multi dimenssional aaray useing for loop......
+
+for(int i=0;i<flats.length;i++) {
+			for(int j=0;j<flats[i].length;j++) {
+			System.out.print(flats[i][j]);
+			System.out.print(" ");
+		}
+			System.out.println(" ");
+}
+		
+		
+		
+}}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTION 39:
 
 
 
