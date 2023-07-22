@@ -872,7 +872,551 @@ for(int i=0;i<flats.length;i++) {
 }}
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-QUESTION 39:
+QUESTION 39: sum of 5 elements of arrays..
+
+package mohammadammar;
+
+import java.util.Scanner;
+
+public class ammarjava {
+public static void main(String[] args){
+float [] marks= {12.6f,13.4f,15.5f,18,20};
+float sum = 0;
+
+//for (int i=0;i<marks.length;i++) {
+//	sum = sum+marks[i];
+	
+//}
+
+              OR
+
+for (float element:marks) {
+	sum = sum+element;
+	
+}
+System.out.println(sum);
+
+}}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 40: to find whethere the integer is present in the array or not..
+
+
+package mohammadammar;
+
+import java.util.Scanner;
+
+public class ammarjava {
+public static void main(String[] args){
+	Scanner sc= new Scanner(System.in);
+int [] integer= {1,4,6,0,-1,-6};
+System.out.println("enter any integer");
+int n=sc.nextInt();
+int i =0;
+boolean is_in_array= false;
+for( i=0;i<integer.length;i++) {
+	if(n==integer[i]) {
+		is_in_array=true;
+		break;
+	}}
+	
+if(is_in_array) {
+	System.out.println("value is present in array ");
+
+
+}
+else {
+	System.out.println("the value is not present in the array");
+}
+
+}} 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTION 41: avg of element of arrays..
+
+package mohammadammar;
+
+import java.util.Scanner;
+
+public class ammarjava {
+public static void main(String[] args){
+	//Scanner sc= new Scanner(System.in);
+int [] marks= {12,13,15,18,19};
+float sum =0;
+float avg =0.0f;
+for(int i=0;i<marks.length;i++) {
+	sum = sum + marks[i];
+	avg = sum/marks.length;
+}
+System.out.println(avg);
+	
+}} 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+QUESTION 42: adding of 2 matrix of 2x3..
+
+package mohammadammar;
+
+//import java.util.Scanner;
+
+public class ammarjava {
+public static void main(String[] args){
+	//Scanner sc= new Scanner(System.in);
+int[][] matrix_1 = new int[2][3];
+matrix_1[0][0]=12;
+matrix_1[0][1]=22;
+matrix_1[0][2]=34;
+matrix_1[1][0]=21;
+matrix_1[1][1]=23;
+matrix_1[1][2]=24;
+
+int[][] matrix_2 = new int[2][3];
+matrix_2[0][0]=1;
+matrix_2[0][1]=2;
+matrix_2[0][2]=4;
+matrix_2[1][0]=1;
+matrix_2[1][1]=3;
+matrix_2[1][2]=4;
+
+int [][] result = new int[2][3];
+result [0][0]=0;
+result [0][1]=0;
+result [0][2]=0;
+result [1][0]=0;
+result [1][1]=0;
+result [1][2]=0;
+
+for(int i=0;i<matrix_1.length;i++) {
+	for(int j=0;j<matrix_1[i].length;j++) {
+	//	System.out.format("setting value for i=%d and j=%d\n",i,j);
+		result[i][j]=matrix_1[i][j]+matrix_2[i][j];
+		System.out.print(result[i][j]+" ");
+}
+System.out.println("");	
+}
+
+	
+}} 
+
+************************OR****************************  
+
+package mohammadammar;
+
+public class arrays_12 {
+	public static void main(String[] args) {
+// multi dimensional arrays (2-d array)
+		
+		int[][]mat1 = {{01,02,03},{04,05,06}};
+		int[][]mat2 = {{2,2,2},{5,5,5}};
+int[][]result= {{0,0,0},{0,0,0}};
+
+		for(int i=0;i<mat1.length;i++) {
+			for(int j=0;j<mat1[i].length;j++) {
+				result[i][j]=mat1[i][j]+ mat2[i][j];
+				System.out.print(result[i][j]+" ");
+		}
+		System.out.println(" ");	
+		}
+
+		
+}}
+
+-------------------------------------------------------------------------------------------------------------------
+QUESTION 43: reversing an array..
+
+package mohammadammar;
+
+//import java.util.Scanner;
+public class ammarjava {
+public static void main(String[] args){
+	//Scanner sc= new Scanner(System.in);
+
+ int[] array = {12,34,56,78};
+ for(int i=array.length-1;i>=0;i--) {
+	 System.out.println(array[i]);
+ }
+	
+***************************************OR******************************************************
+
+package mohammadammar;
+
+//import java.util.Scanner;
+public class ammarjava {
+public static void main(String[] args){
+	//Scanner sc= new Scanner(System.in);
+int[] arr= {2345,34,2,3,4,5,56};
+int l = arr.length;
+int temp ;
+int n= Math.floorDiv(arr.length, 2);
+	for(int i=0;i<n;i++) {
+		//swap a[i] and a[l-1-i]
+		// |4| |3| ||
+		temp = arr[i];
+		arr[i]= arr[l-1-i];
+	    arr[l-1-i]= temp;
+		
+	}
+	for(int element: arr) {
+	System.out.println(element);
+}} }
+------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 44: max and min element of arry..
+
+package mohammadammar;
+
+//import java.util.Scanner;
+public class ammarjava {
+public static void main(String[] args){
+	//Scanner sc= new Scanner(System.in);
+int[] arr= {345,34,2,3,4,5,0,5567};
+int max= Integer.MIN_VALUE ;
+int min= Integer.MAX_VALUE;
+for(int element: arr) {
+	if(element>max) {
+		max=element;
+		
+	}	
+	else if(element<min) {
+		min=element;
+		
+	}
+}
+System.out.println("the value of the maximum element in this arry is:"+max);
+System.out.println("the value of the minimum element in this arry is:"+min);
+
+}} 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 45: array is sorted or nor...
+
+
+package mohammadammar;
+
+//import java.util.Scanner;
+public class ammarjava {
+public static void main(String[] args){
+	//sorted means smaller to greater;
+	boolean issorted= true;
+int[] arr= {5,34,222,334,445,555,780,5567};
+for(int i=0;i<arr.length-1;i++) {
+	if(arr[i]>arr[i+1]) {
+		issorted=false;
+		
+		break;
+	}
+	}
+if(issorted) {
+	System.out.println("the array is sorted");
+}
+else {
+	System.out.println("not sorted");
+}
+
+}} 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTION 46: method in java..
+
+package mohammadammar;
+
+public class method_13 {
+
+	static int logic(int x,int y) {
+		int z;
+		
+		
+		if(x>y) {
+			z=x+y;
+		}
+		else {
+			z=(x+y)*5;
+		}
+		return z;
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		int a=2;
+		int b=3;
+		int c;
+		c=logic(a,b);
+		int a1=2;
+		int b1=1;
+		int c1;
+		c1=logic(a1,b1);
+		
+		
+		System.out.println(c);
+		System.out.println(c1);
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+QUESTION 47: method in java..
+
+
+package mohammadammar;
+
+public class method_13 {
+
+
+	static void telljoke() {
+		System.out.println("i invented a new word!\n"+"plagairism!");
+	
+
+	}
+	
+	public static void main(String[] args) {
+		telljoke();
+	}
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 48:
+
+package mohammadammar;
+
+public class method_13 {
+	
+	static void change(int a) {
+		a=98;
+	}
+	
+	
+	static void change2(int[] arr ) {
+		arr[0]=98;
+	}
+
+
+
+	static void telljoke() {
+		
+		System.out.println("i invented a new word!\n"+"plagairism!");
+	
+
+	}
+	
+	public static void main(String[] args) {
+		//telljoke();
+		int [] marks = {56,88,90,98,22};
+//  CASE 1 CHANGE THE INTEGER
+//		int x=45;
+//		change(x);
+//		System.out.println("the value of x after running chage is :"+ x);
+		
+ // CASE 2 CHANGE THE ARRAY
+			
+			change2(marks);
+			System.out.println("the value of marks after running chage is :"+ marks[0]);
+		
+	}
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 49: method of over loading ..
+
+package mohammadammar;
+
+public class method_13 {
+	
+	static void foo() {
+		System.out.println("good morning");
+	}
+	
+	
+	static void foo(int a) {
+		System.out.println("total boys are: " + a); // a is parameter
+	}
+	
+	static void foo(int a,int b) {
+		System.out.println("boys are: " + a + " and girls are: " + b); // a and b are parameter
+	}
+	
+	public static void main(String[] args) {
+	// arguments are actual value
+		foo();
+		foo(330); // 330 is ARGUMENT
+		foo(45,89); // 45 AND 89 ARE ARGUMENT
+	}
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 50: VAIRAIBLE ARGUMENTS........................
+
+package mohammadammar;
+
+public class vairable_arguments_14 {
+	
+	static int sum(int a, int b) {
+		return a+b;
+	}
+	
+	static int sum(int a, int b,int c) {
+		return a+b+c;
+	}
+	
+	static int sum(int a, int b, int c, int d) {
+		return a+b+c+d;
+	}
+	
+	static int sum(int a, int b,int c,int d, int e) {
+		return a+b+c+d+e;
+	}
+	
+	
+public static void main(String[] args) {
+	System.out.println("welcome to varaggs tutorial");
+	System.out.println("the sum of 4 and 5 is:"+" "+sum(4,5,6));
+	System.out.println("the sum of 4 and 5 is:"+" "+sum(4,5,4,4));
+	System.out.println("the sum of 4 and 5 is:"+" "+sum(4,5,3,2,1));
+	System.out.println("the sum of 4 and 5 is:"+" "+sum(4,5));
+	;
+}
+}
+
+
+*************************************OR*********************************************************OR*************************************************************
+package mohammadammar;
+
+public class vairable_arguments_14 {
+	
+//	static int sum(int a, int b) {
+//		return a+b;
+//	}
+//	
+//	static int sum(int a, int b,int c) {
+//		return a+b+c;
+//	}
+//	
+//	static int sum(int a, int b, int c, int d) {
+//		return a+b+c+d;
+//	}
+//	
+//	static int sum(int a, int b,int c,int d, int e) {
+//		return a+b+c+d+e;
+//	}
+//	
+//	
+	static int sum(int ...arr) {
+		int result =0;
+		for(int a: arr) {
+          result += a;
+         
+		}
+		 return result;
+	}
+	
+	
+public static void main(String[] args) {
+	System.out.println("welcome to varaggs tutorial");
+	
+
+	System.out.println("the sum of nothing is:" +sum());
+	System.out.println("the sum of 1 is:" +sum(1));
+	System.out.println("the sum is:" +sum(4,5));
+	System.out.println("the sum is:" +sum(6,4,5));
+	System.out.println("the sum is:" +sum(2,6,4,5));
+	System.out.println("the sum is:" +sum(6,3,4,5));
+	
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION 51:
+
+package mohammadammar;
+
+public class vairable_arguments_14 {
+	
+	
+	static int sum(int x,int ...arr) {
+		int result =x;
+		for(int a: arr) {
+          result += a;
+         
+		}
+		 return result;
+	}
+	
+	
+public static void main(String[] args) {
+	System.out.println("welcome to varaggs tutorial");
+	
+//	System.out.println("the sum of nothing is:" +sum());// error
+	System.out.println("the sum of nothing is:" +sum(0));
+	System.out.println("the sum of 1 is:" +sum(1));
+	System.out.println("the sum is:" +sum(4,5));
+	System.out.println("the sum is:" +sum(6,4,5));
+
+	
+}
+}
+--------------------------------------------------------------------------------------------------------------------------
+QUESTION 52: recursion baisics...
+
+package mohammadammar;
+
+import java.util.Scanner;
+
+public class recursion_15 {
+	 //calling function by itself is recursion
+	
+	static int factorial_iterative(int n) { //method 1
+		if(n==0 || n==1) {
+			return 1;
+		}
+		else {
+			int product =1;
+			for(int i=n;i>0;i--) {
+				product *= i;
+			}
+			return product;
+		}
+	
+	}
+	static int factorial(int n) {  // method 2
+		// factorial (0) is 1
+		// factorial of 5 is -> 5*4*3*2*1
+		// factorial of n is -> n*(n-1)*(n-2).....*1
+		// factorial of n is -> n*factorial(n-1)		
+	if(n==0||n==1) {
+		return 1;
+	}
+	else {
+		return n*factorial(n-1);
+	}
+	
+	}
+	
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+	
+	System.out.print("enter the number n to get the factorial:\t");
+	int n=sc.nextInt();	
+	System.out.println("the value of factorial n is::\t" + factorial(n));
+	System.out.println("the value of factorial n is::\t" + factorial_iterative(n));
+		
+	}
+	
+//	public static void main(String[] args) {  // without recursion
+//		int n=4;
+//		int factorial =n;
+//		for(int i=n;i>1;i--) {
+//			factorial=factorial*(i-1);
+//		}
+//		System.out.println(factorial);
+//	}
+}
+
+
+-----------------------------------------------------------------------------------------------------------------
+QUESTION 53: fibonacci series..
 
 
 
